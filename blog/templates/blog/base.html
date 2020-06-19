@@ -5,10 +5,13 @@
         <title>Minnie's blog</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Carrois Gothic SC' rel='stylesheet' type = 'text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Coda' rel='stylesheet' type = 'text/css'>
         <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
         
     </head>
+        
     <body>
         <div class="page-header">
             {% if user.is_authenticated %}
@@ -17,6 +20,18 @@
             {% endif %}    
                 <h1><a href="/">Minnie's Blog</a></h1>
         </div>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{% url 'post_list' %}">Home</a>
+            </div>
+            <ul class="nav navbar-nav">
+                {% for post in posts %}
+                <li><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></li>
+                {% endfor %}
+            </ul>
+            </div>
+        </nav>
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
