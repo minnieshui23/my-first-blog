@@ -20,7 +20,7 @@ h1, h2, h3, h4 {
     }
 .date {
     
-    color: #ffffff;
+    color: #BDC5C8;
     }
 .save {
     float: right;
@@ -36,7 +36,7 @@ h1, h2, h3, h4 {
     margin-right: 20px;
     }
 .post {
-    color: #BDC5C8;
+    color: #ffffff;
     margin-bottom: 70px;
     }
 .post h2 a, .post h2 a:visited {
@@ -44,6 +44,7 @@ h1, h2, h3, h4 {
     color: #ffffff;
     }
 .comment {
+    color: #BDC5C8;
     margin: 20px 0px 20px 20px;
 }
 body {
